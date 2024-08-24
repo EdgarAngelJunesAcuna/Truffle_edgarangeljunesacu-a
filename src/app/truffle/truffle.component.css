@@ -4,60 +4,113 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f3f4f6;
-    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2b2f4c, #1b1e3c);
+    font-family: 'Arial', sans-serif;
     padding: 20px;
     text-align: center;
-}
-
-.truffle-input {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 400px;
-    border: 2px solid #3498db;
-    border-radius: 5px;
+    color: #ffffff;
     box-sizing: border-box;
 }
 
-.truffle-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.truffle-input {
+    margin-bottom: 15px;
+    padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #00c9ff;
+    border-radius: 8px;
+    background-color: #141627;
+    color: #ffffff;
+}
+
+.truffle-btn {
+    background-color: #00c9ff;
+    color: #1b1e3c;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .truffle-btn:hover {
-    background-color: #2980b9;
+    background-color: #00a3cc;
+    color: #ffffff;
 }
 
 .info-box {
     margin-top: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    background-color: #1b1e3c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 .info-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    background-color: #2b324c;
+    border-radius: 8px;
+    padding: 10px;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.info-card p {
-    margin: 0;
+.info-card:hover {
+    background-color: #353a5c;
+}
+
+.info-title {
     font-size: 16px;
-    color: #2c3e50;
+    font-weight: bold;
+    color: #00c9ff;
 }
 
-.info-card p strong {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
+.info-value {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.loading-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #00c9ff;
+}
+
+/* Barra de carga */
+.loader {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 450px;
+    height: 4px;
+    background-color: #00c9ff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #00a3cc;
+    animation: loader-animation 1s infinite;
+}
+
+@keyframes loader-animation {
+    0% {
+        left: -50%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -50%;
+    }
 }
